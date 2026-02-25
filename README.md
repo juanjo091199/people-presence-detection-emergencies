@@ -181,6 +181,14 @@ Designed for CPU-first execution for maximum compatibility.
 
 Optimized detection pipeline for low-resource environments.
 
+## Demo
+
+### Input Image
+![input](docs/demo_input.png)
+
+### Detection Result
+![output](docs/deteccion.png)
+
 📄 License
 
 This project is for academic and research purposes.
