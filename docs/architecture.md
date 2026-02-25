@@ -16,30 +16,28 @@ The architecture prioritizes reliability, low computational overhead, and deploy
 ---
 
 ## High-Level Architecture
----
-Camera / Image Source
-│
-▼
-Image Preprocessing (Resize + Normalization)
-│
-▼
-YOLOv7 Inference Engine (PyTorch)
-│
-▼
-Non-Maximum Suppression (NMS)
-│
-▼
-Person Counting
-│
-▼
-Image Annotation
-│
-▼
-Telegram Alert (Image + Message)
----
+## System Flow Diagram
+
+```mermaid
+flowchart TD
+
+subgraph Input Layer
+    A1[PC Mode<br>Load Image from Disk]
+    A2[Raspberry Pi Mode<br>Capture via libcamera]
+end
+
+A1 --> B[Image Preprocessing<br>Resize + Normalize]
+A2 --> B
+
+B --> C[YOLOv7 Inference<br>PyTorch Engine]
+C --> D[Non-Maximum Suppression]
+D --> E[Person Counting]
+E --> F[Image Annotation]
+F --> G[Telegram Bot API<br>Send Image + Alert Message]
+```
 
 
----
+
 
 ## Components
 
