@@ -24,9 +24,9 @@ from utils.plots import plot_one_box
 # CONFIG
 # ==============================
 
-MODEL_PATH = "models/modelo_yolov7_final.pt"
-IMAGE_PATH = "assets/foto1.png"
-OUTPUT_PATH = "results/deteccion.png"
+MODEL_PATH = "models/model.pt"
+IMAGE_PATH = "assets/photo.png"
+OUTPUT_PATH = "results/detection.png"
 
 IMG_SIZE = 640
 CONF_THRES = 0.5
