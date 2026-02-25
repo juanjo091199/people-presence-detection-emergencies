@@ -90,43 +90,51 @@ people-presence-detection-emergencies/
 ## ⚙ Installation (Windows + Conda Recommended)
 
 ### 1️⃣ Create environment
-
-
+```
 conda create -n peoplebot python=3.10 -y
 conda activate peoplebot
+```
 2️⃣ Install compatible PyTorch (CPU)
+```
 conda install -y pytorch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 cpuonly -c pytorch
+```
 3️⃣ Install project dependencies
+```
 pip install -r requirements.txt
+```
 4️⃣ Clone YOLOv7 into third_party
+```
 mkdir third_party
 cd third_party
 git clone https://github.com/WongKinYiu/yolov7
 cd ..
+```
 5️⃣ Install YOLOv7 dependencies
+```
 pip install -r requirements.txt
+```
 📦 Model Setup
 
 Place your trained YOLOv7 model inside:
-
+```
 models/best.pt
-
+```
 The model file is not included in this repository.
 
 ▶ Running the Bot (PC Mode)
 
 Set your Telegram token:
-
+```
 set TELEGRAM_BOT_TOKEN=YOUR_TOKEN
-
+```
 Run:
-
+```
 python src/edge_detector_bot.py
-
+```
 In Telegram, send:
-
+```
 /foto
-
+```
 The bot will:
 
 Load the test image
@@ -140,27 +148,29 @@ Send an alert message
 🍓 Raspberry Pi Mode
 
 Open edge_detector_bot.py and set:
-
+```
 USE_RASPBERRY_CAMERA = True
-
+```
 Ensure libcamera-still is installed on the Raspberry Pi.
 
 Then run:
-
+```
 python3 src/edge_detector_bot.py
+```
 🖥 Optional: GPU (CUDA)
 
 If you have an NVIDIA GPU, you may install the CUDA-enabled version of PyTorch from:
-
+```
 https://pytorch.org/get-started/locally/
-
+```
 Then change:
-
+```
 device = torch.device("cpu")
-
+```
 to:
-
+```
 device = torch.device("cuda")
+```
 🧠 Technical Notes
 
 PyTorch is installed via Conda to ensure binary compatibility on Windows.
