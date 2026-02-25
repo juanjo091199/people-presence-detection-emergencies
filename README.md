@@ -69,6 +69,7 @@ The system detects people in an image and sends real-time alerts via Telegram.
 ---
 
 ## 📂 Project Structure
+---
 people-presence-detection-emergencies/
 │
 ├── src/
