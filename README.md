@@ -189,9 +189,6 @@ Optimized detection pipeline for low-resource environments.
 ### Detection Result
 ![output](docs/deteccion.png)
 
-📄 License
-
-This project is for academic and research purposes.
-
 ## License
+This project is for academic and research purposes.
 MIT
