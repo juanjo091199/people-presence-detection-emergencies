@@ -3,7 +3,8 @@ import sys
 import time
 import subprocess
 from pathlib import Path
-
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+os.environ["MKL_THREADING_LAYER"] = "GNU"
 import cv2
 import torch
 import telepot
@@ -23,13 +24,13 @@ from utils.plots import plot_one_box
 # CONFIG
 # ==============================
 
-MODEL_PATH = "models/best.pt"
-IMAGE_PATH = "assets/sample.jpg"
-OUTPUT_PATH = "results/deteccion.jpg"
+MODEL_PATH = "models/modelo_yolov7_final.pt"
+IMAGE_PATH = "assets/foto1.png"
+OUTPUT_PATH = "results/deteccion.png"
 
 IMG_SIZE = 640
-CONF_THRES = 0.50
-IOU_THRES = 0.45
+CONF_THRES = 0.5
+IOU_THRES = 0.5
 
 MAX_RETRIES = 3
 
@@ -41,7 +42,8 @@ USE_RASPBERRY_CAMERA = False  # <-- PC mode by default
 # Windows (cmd):
 #   set TELEGRAM_BOT_TOKEN=xxxxx
 #   set TELEGRAM_CHAT_ID=123456789   (optional)
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+#TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = "6962981081:AAHcsX22wCbqySMlJqsOKhCY7LK6PLzK-NI"
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")  # optional
 
 
