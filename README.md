@@ -23,3 +23,26 @@ This system automates presence detection and sends an alert with an annotated im
 - Roboflow (dataset labeling / export)
 
 ## Repository structure
+docs/ → architecture diagrams, demo media, thesis (sanitized)
+src/ → inference + alerting code (edge deployment)
+notebooks/ → training / evaluation notebooks (with notes)
+results/ → metrics summary, figures, comparisons
+data/ → dataset instructions (no raw data unless allowed)
+
+
+## Results (high level)
+- Best model selected: **YOLOv7**
+- Metric highlights and inference-time comparisons are documented in `results/`.
+
+## Reproducibility (coming next)
+- [ ] Setup instructions
+- [ ] Inference script on Raspberry Pi
+- [ ] Telegram alert configuration
+- [ ] Model evaluation summary
+
+## Attribution
+Model training was performed using the official training pipelines/notebooks provided by the YOLO repositories.  
+This project focuses on **dataset preparation, fine-tuning configuration, evaluation, and edge deployment integration**.
+
+## License
+MIT
