@@ -20,7 +20,7 @@ OUTPUT_PATH = "results/deteccion.png"
 DEVICE = "cpu"
 IMG_SIZE = 640
 CONF_THRES = 0.25
-IOU_THRES = 0.45
+IOU_THRES = 0.5
 
 
 def main():
