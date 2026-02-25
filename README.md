@@ -191,4 +191,5 @@ Optimized detection pipeline for low-resource environments.
 
 ## License
 This project is for academic and research purposes.
+
 MIT
