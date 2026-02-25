@@ -137,13 +137,13 @@ In Telegram, send:
 ```
 The bot will:
 
-Load the test image
+- Load the test image
 
-Perform detection
+- Perform detection
 
-Send the annotated image
+- Send the annotated image
 
-Send an alert message
+- Send an alert message
 
 🍓 Raspberry Pi Mode
 
