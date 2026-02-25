@@ -1,18 +1,10 @@
-# --- base ---
+
+torch==2.4.0
+torchvision==0.19.0
+torchaudio==2.4.0
 opencv-python
+numpy
 telepot
 urllib3
-python-dotenv
 
-# --- YOLOv7 dependencies (common) ---
-numpy
-pandas
-matplotlib
-pyyaml
-tqdm
-seaborn
-scipy
-requests
-pillow
 
-# note: torch/torchvision se instala aparte (ver README) para evitar conflictos en Windows
